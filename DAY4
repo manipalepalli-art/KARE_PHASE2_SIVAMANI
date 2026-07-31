@@ -1,4 +1,4 @@
-import java.util.*;
+1) import java.util.*;
 class Main {
     public static void main(String[] args){
     int i, row , col;
@@ -10,3 +10,220 @@ class Main {
     
     }
 }
+
+2)  i/p       o/p
+
+*         0   0
+**        1   0 1
+***       2   0 1 2
+****      3   0 1 2 3
+*****     4   0 1 2 3 4
+
+import java.util.*;
+class Main {
+    public static void main(String[] args){
+    int i, row , col;
+    for (row=0;row<5;row++,System.out.println()) {
+    for (col=0; col<row; col++)
+    System.out.print("*");
+    
+     }
+    
+    }
+}  
+
+3)   row      column
+      0        0 1 2 3 4
+      1        0 1 2 3
+      2        0 1 2 
+      3        0 1
+      4        0
+
+
+import java.util.*;
+class Main {
+    public static void main(String[] args){
+    Scanner obj= new Scanner(System.in);
+    int i, row , col;
+    int n= obj.nextInt();
+    for (row=0;row<n;row++,System.out.println()){
+    for (col=0;col<n-row;col++)
+    System.out.print("*");
+    
+     }
+    
+    }
+}
+
+
+4)  row   col
+     1     0
+     2     0 1 2
+     3     0 1 2 3 4
+     4     0 1 2 3 4 5
+
+import java.util.*;
+class Main {
+    public static void main(String[] args){
+    Scanner obj= new Scanner(System.in);
+    int i, row , col;
+    int n= obj.nextInt();
+    for (row=0;row<n;row++,System.out.println()){
+        for (col=0;col<2*row-1;col++)
+        System.out.print("*");
+    
+        }
+    
+    }
+}
+
+5)  i/p 
+*****  
+ *****
+  *****
+   *****
+    *****
+
+import java.util.*;
+class Main {
+    public static void main(String[] args){
+    Scanner obj= new Scanner(System.in);
+    int n= obj.nextInt();
+    int row,col;
+    for (row=0;row<n;row++,System.out.println()){
+        for (col=0;col<n-row-1;col++)
+        System.out.print(" ");
+        for (col=0;col<n;col++)
+        System.out.print("*");
+    
+        }
+    
+    }
+}
+
+6) i/p      o/p
+   *         *
+   **        **
+   ***       ***
+   ****      ****
+   *****     *****
+
+import java.util.*;
+class Main {
+    public static void main(String[] args){
+    Scanner obj= new Scanner(System.in);
+    int n= obj.nextInt();
+    int row,col;
+    for (row=0;row<n;row++,System.out.println()){
+        for (col=0;col<=row;col++)
+        System.out.print("+");
+        for (col=0;col<n-row-1;col++)
+        System.out.print(" ");
+        for (col=0;col<n;col++)
+        System.out.print("*");
+    
+        }
+    
+    }
+}   
+
+
+7)  i/p  0/p
+    *      *
+    **    **
+    ***  ***  
+    **** ****
+    **********
+
+import java.util.*;
+class Main {
+    public static void main(String[] args){
+    Scanner obj= new Scanner(System.in);
+    int n= obj.nextInt();
+    int row,col;
+    for (row=0;row<n;row++,System.out.println()){
+        for (col=0;col<=row;col++)
+        System.out.print("*");
+        for (col=0;col<n-row-1;col++)
+        System.out.print("  ");
+        for(col=0;col<n-row-1;col++)
+        System.out.print(" ");
+        for(col=0;col<=row;col++)
+        System.out.print("+");
+    
+        }
+    
+    }
+}   
+
+8) i/p         o/p
+    * 
+    **
+    ***
+    **** 
+    *****
+    ****
+    *** 
+    ** 
+    *
+
+
+import java.util.*;
+class Main {
+    public static void main(String[] args){
+    Scanner obj= new Scanner(System.in);
+    int n= obj.nextInt();
+    int row,col;
+    for (row=0;row<n-1;row++,System.out.println()){
+        for (col=0;col<=row;col++)
+        System.out.print("*"); } 
+        for(row=0;row<n;row++,System.out.println()) {
+        for (col=0;col<n-row;col++)
+        System.out.print("*");
+    
+        }
+    
+    }
+}   
+
+9) i/p            o/p
+    *             *
+    **            **
+    ***           ***
+    ****          ****
+    *****         *****
+    ****           ****
+    ***             ***
+    **               **
+    *                  *
+
+import java.util.*;
+class Main {
+    public static void main(String[] args){
+    Scanner obj= new Scanner(System.in);
+    int n= obj.nextInt();
+    int row,col;
+    for (row=0;row<n-1;row++,System.out.println()){
+        for (col=0;col<=row;col++)
+        System.out.print("*");
+        for(col=0;col<n-row-1;col++)
+        System.out.print(" ");
+        for(col=0;col<-row-1;col++)
+        System.out.print(" ");
+        for(col=0;col<=row;col++)
+        System.out.print("*"); }
+        for(row=0;row<n;row++,System.out.println()) {
+        for (col=0;col<n-row;col++)
+        System.out.print("*");
+        for(col=0;col<=row-1;col++)
+        System.out.print(" ");
+        for(col=0;col<=row-1;col++)
+        System.out.print(" ");
+        for(col=0;col<n-row;col++)
+        System.out.print("*");
+    
+        }
+    
+    }
+}   
+   
