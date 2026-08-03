@@ -1,4 +1,4 @@
-//n=4862
+1)//n=4862
 //c=0
 //486
 //48
@@ -16,5 +16,103 @@ class Main{
             c++;
         }
         System.out.print("no.of.digits"+c);
+    }
+}
+
+2)reverse the number 4821
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,ans = 0;
+        while(n!=0)
+        {
+            d=n%10;
+            ans=ans*10+d;
+            n=n/10;
+        }
+        System.out.print("Reverse Number:"+ans);
+    }
+}
+
+3)//i/p      o/p
+//4821     odd digit count:1
+//         even digit count:3
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        int ec=0,oc=0,d;
+        while(n!=0)
+        {
+            d = n%10;
+            if(d%2==0)
+            ec++;
+            else
+            oc++;
+            n=n/10;
+        }
+        System.out.print("odd digit count:"+oc);
+        System.out.print("even digit count:"+ec);
+    }
+}
+
+
+4)   //to count the prime digits in the given number
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        int c = 0,d;
+        while(n!=0)
+        {
+            d = n%10;
+            if(d==2||d==3||d==5||d==7)
+            c++;
+            n=n/10;
+        }
+        System.out.print("prime digit count:"+c);
+    }
+}
+
+//5)reverse the given number without using right side formation
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        int d;
+        while(n!=0)
+        {
+            d = n%10;
+            System.out.print(d);
+            n=n/10;
+        }
+    }
+}
+
+//6)palindrome number
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp = n,d,rev=0;;
+        while(n!=0)
+        {
+            d = n%10;
+            rev=rev*10+d;
+            n=n/10;
+        }
+        if(temp==rev)
+            System.out.print("palindrome number");
+            else
+            System.out.print("not a palindrome number");
     }
 }
