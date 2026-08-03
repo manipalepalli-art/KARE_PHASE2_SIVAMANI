@@ -116,3 +116,47 @@ class Main{
             System.out.print("not a palindrome number");
     }
 }
+
+7)  //HARSHAD number
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp=n;
+        int sum=0;
+        while(n!=0)
+        {
+            d = n%10;
+            sum=sum+d;
+        }
+        if(temp%sum==0)
+        System.out.print("HARSHAD NUMBER");
+        else
+        System.out.print("NOT A HARSHAD NUMBER");
+    }
+}
+
+8) //neon number
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int square = n * n;
+        int temp=n;
+        int sum = 0, d;
+        while(square != 0) {
+            d = square % 10;
+            sum = sum + d;
+            square = square / 10;
+        }
+        if (sum == n)
+        System.out.print("NEON NUMBER");
+        else
+        System.out.print("NOT A NEON NUMBER");
+    }
+    
+}
