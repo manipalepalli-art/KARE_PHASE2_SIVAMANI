@@ -182,7 +182,7 @@ class Main{
                 smax = max;
                 max = arr[i];
             }
-            else if(arr[i]>smax){
+            else if(arr[i]>smax && arr[i]<max){
             smax=arr[i];
             }
         }
@@ -191,5 +191,3 @@ class Main{
   }
             
 }
-
-
