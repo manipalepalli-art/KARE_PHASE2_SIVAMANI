@@ -84,6 +84,75 @@ class Main{
         System.out.print(arr[i]+" ");
     }
 }
-
+//5)i/p           o/p
+ // 5               
+ // 1 2 3 4          1 3    6     10      15
+ //                 1 1+2 1+2+3 1+2+3+4  1+2+3+4+5
+//                   1 3   3+3    6+4       10+5
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[]=new int[n];
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        for(i=1;i<n;i++)
+        arr[i]=arr[i] + arr[i-1];
+        for(i=0;i<n;i++)
+        System.out.print(arr[i] + " ");
+            
+  }
+            
+}
+//6)to find the  greatest value
+//i/p                o/p
+ // 5               
+ // 1 45 34 67 54   67
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[]=new int[n];
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int max = Integer.MIN_VALUE;
+        for(i=0;i<n;i++){
+            if(arr[i]>max)
+            max=arr[i];
+        }
+        System.out.print("MAXIMUM ELEMENT: " + max);
+    
+        
+  }
+            
+}
+//7)to find the  smallest value
+//i/p                o/p
+ // 5               
+ // 1 45 34 67 54   67
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[]=new int[n];
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int min = Integer.MAX_VALUE;
+        for(i=0;i<n;i++){
+            if(arr[i]<min)
+            min=arr[i];
+        }
+        System.out.print("MINIMUM ELEMENT: " + min);
+    
+        
+  }
+            
+}
 
 
