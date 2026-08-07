@@ -68,4 +68,38 @@ class Main {
         System.out.print(arr[i][n-1-i]+ " ");
     }
 }
+//4)transpose the matrix
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int r=sc.nextInt();
+        int c=sc.nextInt();
+        int arr[][]=new int[r][c];
+        int tras[][]=new int[c][r];
+        int i,j;
+        System.out.println("Enter array elements :");
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        for(i=0;i<c;i++)
+        {
+            for(j=0;j<r;j++)
+            {
+                tras[i][j]=arr[j][i];
+            }
+        }
+        System.out.println("Transpose Matrix");
+        for(i=0;i<c;i++,System.out.println()){
+            for(j=0;j<r;j++){
+                System.out.print(tras[i][j]+" ");
+            }
+        }
+                
+    }
+}
 
