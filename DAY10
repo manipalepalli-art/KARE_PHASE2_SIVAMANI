@@ -127,7 +127,7 @@ class Main {
     for(char ch:s.toCharArray())
     if(ch == ' ')
     c++;
-    System.out.print(c+1);
+    System.out.print("Total Number of words: " + (c+1));
     }
 }
 
