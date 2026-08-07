@@ -102,4 +102,32 @@ class Main {
                 
     }
 }
+//5)write a java program to print length of string without using inbuilt method
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s = sc.nextLine();
+    int c = 0;
+    for(char ch:s.toCharArray())
+    c++;
+    System.out.print(c);
+    }
+}
+//6)slow and steady wins the race
+ //ch=
+ // if(ch==' ')// == ' '
+ //c++
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s = sc.nextLine();
+    int c = 0;
+    for(char ch:s.toCharArray())
+    if(ch == ' ')
+    c++;
+    System.out.print(c+1);
+    }
+}
 
