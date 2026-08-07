@@ -130,4 +130,32 @@ class Main {
     System.out.print("Total Number of words: " + (c+1));
     }
 }
+//7)to find the vowels count in the given string
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s =sc.nextLine().toUpperCase();
+    int c = 0;
+    for(char ch:s.toCharArray())
+        if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+
+    c++;
+    System.out.print("Total Number of VOWELS: " + (c));
+    }
+}
+//8)to find the constants count in the given string
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s =sc.nextLine().toUpperCase();
+    int c = 0;
+    for(char ch:s.toCharArray())
+        if(!(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'))
+
+    c++;
+    System.out.print("Total Number of constants: " + (c));
+    }
+}
 
