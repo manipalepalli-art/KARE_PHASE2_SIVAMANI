@@ -57,3 +57,33 @@ class Main{
     g.gen1();
     }
 }
+//3) hierarchical Inheritance
+class Father
+{
+    void gen2()
+    {
+        System.out.println("Gold");
+    }
+}
+class Son extends Father{
+void gen3(){
+    System.out.println("Diamond");
+  }
+}
+class Daughter extends Father{
+    void gen3(){
+System.out.println("Platimum");
+   }
+}
+class Main{
+    public static void main (String[] args) {
+    Son s = new Son();
+    s.gen3();
+    s.gen2();
+    Daughter f = new Daughter();
+    f.gen3();
+    f.gen2();
+    Father g = new Father();
+    g.gen2();
+    }
+}
