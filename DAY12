@@ -135,5 +135,29 @@ class Main
             System.out.print("Not a perfect cube");
             }
         }
+//6)i/p               o/p
+//5
+//2 4 6 18 24       6.00
+import java.util.*;
+class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int i,sum=0,c=0;
+        int arr[]=new int[n];
+        for(i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            if(arr[i]%3==0 && arr[i]%2==0)
+        {
+            sum=sum+arr[i];
+            c++;
+        }
+        }
+        float avg=(float)(sum/c);
+        System.out.printf("%.2f",avg);
+        
+    }
+}
+        
             
             
