@@ -158,6 +158,31 @@ class Main {
         
     }
 }
+/7)find the power of given number without using inbuilt method and by using function with Argument with return type
+import java.util.*;
+class Main {
+    int powerofn(int b,int p)
+    {
+        int r=1;
+        while(p!=0)
+        {
+            r=r*b;
+            p--;
+        }
+        return r;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int b = sc.nextInt();
+        int p = sc.nextInt();
+        Main m = new Main();
+        int ans=m.powerofn(b,p);
+        System.out.print(ans);
+    }
+}
+        
+           
+        
         
             
             
