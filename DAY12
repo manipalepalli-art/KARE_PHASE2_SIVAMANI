@@ -108,3 +108,32 @@ class Main{
                 
             }
         }
+//5)write a java program to check perfect cube or not
+import java.util.*;
+class Main
+        {
+            int pc(int x)
+            {
+                int i;
+                for(i=1;i<=x/2;i++)
+                {
+                    if(i*i*i==x)
+                    {
+                        return 1;
+                    }
+                }
+                return 0;
+            }
+            public static void main(String[] args) {
+            Scanner obj=new Scanner(System.in);
+            int n=obj.nextInt();
+            Main m=new Main();
+            int ans=m.pc(n);
+            if(ans==1)
+            System.out.print("perfect cube");
+            else
+            System.out.print("Not a perfect cube");
+            }
+        }
+            
+            
