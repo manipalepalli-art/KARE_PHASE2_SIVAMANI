@@ -100,10 +100,11 @@ class Main{
             public static void main(String[] args){
                 Main m=new Main();
                 boolean ans=m.am();
-                if(true)
+                if(ans){
                 System.out.print("Automorphic Number");
-                else
+                }else{
                 System.out.print("Not an Automorphic Number");
+            }
                 
             }
         }
