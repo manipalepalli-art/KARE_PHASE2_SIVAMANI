@@ -56,7 +56,7 @@ class Main{
         
     }
 }
-//write a java program to check the given number is power of 2 or not by using function with argument no return type
+//3)write a java program to check the given number is power of 2 or not by using function with argument no return type
 import java.util.*;
 class Main{
         void powerof2(int a)
@@ -77,3 +77,33 @@ class Main{
         m.powerof2(n);
         }
     }
+//4)write a java program to automorphic number
+import java.util.*;
+class Main{
+        boolean am()
+        {
+            Scanner obj=new Scanner(System.in);
+            int n=obj.nextInt();
+            int temp=n,c=0;
+            int sqr=n*n;
+            while(n!=0)
+            {
+                n=n/10;
+                c++;
+            }
+            int power=(int)Math.pow(10,c);
+            if(sqr%power==temp)
+            return true;
+            else
+            return false;
+            }
+            public static void main(String[] args){
+                Main m=new Main();
+                boolean ans=m.am();
+                if(true)
+                System.out.print("Automorphic Number");
+                else
+                System.out.print("Not an Automorphic Number");
+                
+            }
+        }
