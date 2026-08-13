@@ -1,21 +1,78 @@
-//1) write a java program to find nth term of fibinocci series by using recursion
-OUTPUT:
-6
-8
-
-
+//1)write a java programe to fine the nth term if fibinocci series by using recursion
 import java.util.*;
-public class Main
-{
-    static int fib(int n){
-        if(n<=1)
-            return n;
+public class Main {
+        static int fib(int n){
+            if(n<=1)
+                return n;
             return fib(n-1)+fib(n-2);
+        }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int ans=fib(n);  
+        System.out.println(ans);
+
     }
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n=sc.nextInt();
-		int ans=fib(n);
-		System.out.println(ans);
-	}
+}
+
+//2)NO argument Constructor
+import java.util.*;
+public class Main {
+        Main(){
+            System.out.println("Main is started");
+        }
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+    }
+}
+// default Constructor
+import java.util.*;
+public class Main {
+        int rn;
+        String name;
+        Main(){
+            System.out.println(name+" "+rn);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+    }
+}
+//3)parametrized Constructor
+import java.util.*;
+public class Main {
+        int rn;
+        String name;
+        Main(int r,String n){
+            this.rn=r;
+            this.name=n;
+        }
+        void display(){
+            System.out.println(rn+" "+name);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main(18,"siddu");
+        obj.display();
+    }
+}
+//4)copy Constructor
+public class Main {
+        int rn;
+        String name;
+        Main(int r,String n){
+            this.rn=r;
+            this.name=n;
+        }
+        Main(Main obj){
+            obj.rn=25;
+        }
+        void display(){
+            System.out.println(rn+" "+name);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main(18,"siddu");
+        Main ob=new Main(obj);
+        obj.display();
+    }
 }
