@@ -246,6 +246,68 @@ class Main{
             System.out.println("Element not found");
     }
 }
+//6)bubble sort the linked list
+import java.util.*;
+class Node{
+    int data;
+    Node next;
+    Node(int d) {
+        this.data = d;
+        this.next = null;
+    }
+}
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        Main m = new Main();
+        int d = sc.nextInt();
+        while(d!=-1){
+            m.insert(d);
+            d=sc.nextInt();
+        }
+        m.sort();
+        m.display();
+    }
+    Node first;
+    void insert(int d){
+        Node n = new Node(d);
+        if(first == null)
+        first = n;
+        else{
+            Node temp = first;
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            temp.next=n;
+            }
+        }
+        void sort() {
+            if (first == null) {
+                System.out.println("List is Empty");
+                return;
+            }
+            Node i = first;
+            while (i != null) {
+                Node j = i.next;
+                while(j != null){
+                    if(i.data > j.data){
+                        int temp = i.data;
+                        i.data = j.data;
+                        j.data = temp;
+                    }
+                    j=j.next;
+                }
+                i=i.next;
+            }
+        }
+        void display(){
+            Node temp = first;
+            while(temp!=null){
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            }
+        }
+}
 
 
 
