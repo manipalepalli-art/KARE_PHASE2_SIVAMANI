@@ -190,6 +190,63 @@ class Main{
             System.out.print("minelement in LinkedList :"+min);
     }
 }
+//5)searching a specific element in linked list
+import java.util.*;
+class Node{
+    int data;
+    Node next;
+    Node(int d) {
+        this.data = d;
+        this.next = null;
+    }
+}
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        Main m = new Main();
+        int d = sc.nextInt();
+        while(d!=-1){
+            m.insert(d);
+            d=sc.nextInt();
+        }
+        m.searchelement();
+    }
+    Node first;
+    void insert(int d){
+        Node n = new Node(d);
+        if(first == null)
+        first = n;
+        else{
+            Node temp = first;
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            temp.next=n;
+            }
+        }
+        void searchelement() {
+            Scanner sc = new Scanner(System.in);
+            int s=sc.nextInt();
+            int flag=0;
+            if (first == null) {
+                System.out.println("List is Empty");
+                return;
+            }
+            Node temp = first;
+            while (temp != null) {
+                if(s==temp.data){
+                    flag=1;
+                    System.out.println("Element found");
+                    break;
+                }
+                temp = temp.next;
+            
+        }
+        if(flag==0)
+            System.out.println("Element not found");
+    }
+}
+
 
 
 
