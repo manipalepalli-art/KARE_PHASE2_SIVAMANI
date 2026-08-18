@@ -163,8 +163,7 @@ class Main{
     }
 }
 
-
-//8)Write a java program
+//8
 //  i/p               o/p
 //  2 5              1*2=2
 //                   2*2=4
@@ -175,7 +174,7 @@ import java.util.*;
 class Main{
     public static void main(String[] aargs){
         Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
+    int t = sc.nextInt();
         int n = sc.nextInt();
         int i;
         for(i =1; i<=n; i++)
