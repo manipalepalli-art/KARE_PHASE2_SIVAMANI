@@ -159,6 +159,57 @@ class Main
      }
         
     }
+8
+// FIND FACTORIAL USING RECURSION
+import java.util.*;
+public class Main {
+    static int fact(int n) {
+        if(n == 0 || n == 1)
+            return 1;
+        return n * fact(n - 1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int ans = fact(n);
+        System.out.println(ans);
+    }
+}
+
+9
+// FIND SUM OF N NATURAL NUMBERS USING RECURSION
+import java.util.*;
+public class Main {
+    static int sum(int n) {
+        if(n == 0)
+            return 0;
+        return n + sum(n - 1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int ans = sum(n);
+        System.out.println(ans);
+    }
+}
+
+10
+// FIND POWER OF A NUMBER USING RECURSION
+import java.util.*;
+public class Main {
+    static int power(int b, int p) {
+        if(p == 0)
+            return 1;
+        return b * power(b, p - 1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int b = sc.nextInt();
+        int p = sc.nextInt();
+        int ans = power(b, p);
+        System.out.println(ans);
+    }
+}
 
    
    
