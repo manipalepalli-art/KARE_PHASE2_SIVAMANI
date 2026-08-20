@@ -134,6 +134,7 @@ class Main{
         }
     }
 }
+3
 // LINKEDLIST IN STACK 
 import java.util.*;
 class Node{
@@ -223,6 +224,7 @@ class Main{
         }
     }
 }
+4
 // QUEUE WITH ARRAY 
 import java.util.*;
 class Queue{
@@ -296,4 +298,132 @@ class Main{
             }
         }
     }
-}\
+}
+5
+// STACK WITH QUEUE
+import java.util.*;
+class Queue {
+    private int data[];
+    private int front, rear, size;
+    Queue(int n) {
+        data = new int[n];
+        front = 0;
+        rear = -1;
+        size = 0;
+    }
+    public void enqueue(int value) {
+        if (size == data.length) {
+            System.out.println("Queue is full");
+            return;
+        }
+        rear = (rear + 1) % data.length;
+        data[rear] = value;
+        size++;
+    }
+    public int dequeue() {
+        if (size == 0)
+            return -1;
+        int value = data[front];
+        front = (front + 1) % data.length;
+        size--;
+        return value;
+    }
+    public boolean isEmpty() {
+        return size == 0;
+    }
+}
+class Stack {
+    Queue q1, q2;
+    Stack(int n) {
+        q1 = new Queue(n);
+        q2 = new Queue(n);
+    }
+    public void push(int value) {
+        q2.enqueue(value);
+        while (!q1.isEmpty()) {
+            q2.enqueue(q1.dequeue());
+        }
+        Queue temp = q1;
+        q1 = q2;
+        q2 = temp;
+        System.out.println(value + " pushed into stack");
+    }
+    public void pop() {
+        if (q1.isEmpty()) {
+            System.out.println("Stack Underflow");
+            return;
+        }
+        int value = q1.dequeue();
+        System.out.println("Popped element: " + value);
+    }
+    public void peek() {
+        if (q1.isEmpty()) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        int value = q1.dequeue();
+        q2.enqueue(value);
+        while (!q1.isEmpty()) {
+            q2.enqueue(q1.dequeue());
+        }
+        Queue temp = q1;
+        q1 = q2;
+        q2 = temp;
+        System.out.println("Top element: " + value);
+    }
+    public void display() {
+        if (q1.isEmpty()) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.print("Stack Elements: ");
+        while (!q1.isEmpty()) {
+            int value = q1.dequeue();
+            System.out.print(value + " ");
+            q2.enqueue(value);
+        }
+        Queue temp = q1;
+        q1 = q2;
+        q2 = temp;
+        System.out.println();
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size: ");
+        int n = sc.nextInt();
+        Stack s = new Stack(n);
+        while (true) {
+            System.out.println("\n1. Push");
+            System.out.println("2. Pop");
+            System.out.println("3. Peek");
+            System.out.println("4. Display");
+            System.out.println("5. Exit");
+            System.out.println("Enter choice");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter value to push: ");
+                    int value = sc.nextInt();
+                    s.push(value);
+                    break;
+                case 2:
+                    s.pop();
+                    break;
+                case 3:
+                    s.peek();
+                    break;
+                case 4:
+                    s.display();
+                    break;
+                case 5:
+                    System.out.println("Exiting Program...");
+                    sc.close();
+                    return;
+                default:
+                    System.out.println("Invalid Choice");
+            }
+        }
+    }
+}
